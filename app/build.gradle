@@ -1,0 +1,55 @@
+plugins {
+    id 'com.android.application'  // Aplica el plugin de Android
+    id 'com.google.gms.google-services'  // Aplica el plugin de Google Services
+}
+
+android {
+    namespace 'com.example.invernaderointeligente'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.invernaderointeligente"
+        minSdk 31
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'  // Agrega AppCompat
+    implementation 'com.google.android.material:material:1.8.0'  // Agrega Material Design
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'  // Agrega ConstraintLayout
+    implementation 'androidx.activity:activity:1.7.0'  // O una versión más reciente
+
+    // Firebase dependencies using Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:33.7.0')  // Usa Firebase BoM para manejar versiones automáticamente
+    implementation 'com.google.firebase:firebase-analytics'  // Firebase Analytics
+    implementation 'com.google.firebase:firebase-database'  // Firebase Realtime Database
+
+    // MQTT dependencies
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5'
+    implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
+
+    // Test dependencies
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+}
+
+// Agregar esta línea para el plugin de google-services
+apply plugin: 'com.google.gms.google-services'  // Aplica el plugin de Google Services (debe estar al final)

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Campo de texto para ingresar el mensaje -->
+    <EditText
+        android:id="@+id/txtMensaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Escribe tu mensaje"
+        android:layout_marginBottom="16dp"
+        android:inputType="text"
+        android:padding="10dp"
+        android:layout_alignParentTop="true" />
+
+    <!-- Botón para enviar el mensaje -->
+    <Button
+        android:id="@+id/botonEnvioMensaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enviar Mensaje"
+        android:layout_below="@id/txtMensaje"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp" />
+
+    <!-- Botón para conectar a MQTT -->
+    <Button
+        android:id="@+id/btnConectar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Conectar a MQTT"
+        android:layout_below="@id/txtMensaje"
+        android:layout_toEndOf="@id/botonEnvioMensaje"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Área para mostrar los mensajes recibidos -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mensajes recibidos:"
+        android:textSize="16sp"
+        android:layout_below="@id/botonEnvioMensaje"
+        android:layout_marginTop="16dp" />
+
+    <!-- Contenedor para los mensajes -->
+    <ScrollView
+        android:id="@+id/scrollMensajes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/tvLogMensajes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="14sp"
+            android:padding="4dp" />
+    </ScrollView>
+
+</RelativeLayout>

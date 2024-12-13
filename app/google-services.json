@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "303510871724",
+    "project_id": "invernaderointeligente-dfaa5",
+    "storage_bucket": "invernaderointeligente-dfaa5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:303510871724:android:ccbe6d1108e0e91e778909",
+        "android_client_info": {
+          "package_name": "com.example.invernaderointeligente"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaSZ2C4vMe344L5FPDm5IdLWCSYEnnRwM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
